@@ -1,0 +1,15 @@
+# Windows
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+*.db
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+*.egg-info/
