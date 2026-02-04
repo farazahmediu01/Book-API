@@ -1,0 +1,9 @@
+fastapi[standard]
+# sqlmodel
+# aiosqlite
+# pydantic-settings
+
+# Dev dependencies
+# pytest
+# pytest-asyncio
+# httpx
