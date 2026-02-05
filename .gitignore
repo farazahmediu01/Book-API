@@ -3,6 +3,7 @@ desktop.ini
 
 # Python
 __pycache__/
+git_notes.md
 *.py[cod]
 .env
 *.db
@@ -12,5 +13,4 @@ venv/
 .coverage
 htmlcov/
 dist/
-git_notes.md
 *.egg-info/

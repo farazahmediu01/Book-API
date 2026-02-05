@@ -2,7 +2,6 @@ from typing import Annotated, AsyncGenerator
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
 from fastapi import Depends
-
 from .config import settings
 
 engine = create_async_engine(
