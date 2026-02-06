@@ -71,16 +71,17 @@ You should see output like `Docker version 24.x.x` confirming Docker is installe
 
 Run the following command from the project root (where the Dockerfile is located):
 
-1. The `.` is the locate the `Dockerfile`  to build the image from it.
-2. the -t is to give a name to the image
-3. you can also give a name with tag like `cloud-native-fastapi:dev` to specify the version of the image, if you don't specify the tag it will be tagged as `latest` by default.
-4. naming rules for the image name: lowercase letters, numbers, hyphens, and underscores. No spaces or uppercase letters.
-
 ```bash
 docker build -t book-api .
-or 
-docker build-t cloud-native-fastapi:dev .
 ```
+
+Or with a specific tag to version your image:
+
+```bash
+docker build -t cloud-native-fastapi:dev .
+```
+
+> If you don't specify a tag, Docker will tag it as `latest` by default.
 
 **Explanation:**
 
@@ -88,7 +89,12 @@ docker build-t cloud-native-fastapi:dev .
 |------|---------|
 | `docker build` | Command to build an image from a Dockerfile |
 | `-t book-api` | Tags/names the image as "book-api" |
-| `.` | Build context - current directory containing the Dockerfile |
+| `.` | Build context — tells Docker to use the current directory for the Dockerfile and all files needed during the build |
+
+**Image Naming Rules:**
+
+- Allowed: lowercase letters, numbers, hyphens (`-`), underscores (`_`)
+- Not allowed: spaces or uppercase letters
 
 **Expected output:**
 
@@ -204,7 +210,8 @@ docker run -p 8000:8000 book-api
 
 | Action | Command |
 |--------|---------|
-| Build image | `docker build -t book-api .` or `docker build-t cloudnative-fastapi:dev .`|
+| Build image | `docker build -t book-api .` |
+| Build image with tag | `docker build -t cloud-native-fastapi:dev .` |
 | Run container | `docker run -p 8000:8000 book-api` |
 | Run in background | `docker run -d -p 8000:8000 --name book-api-container book-api` |
 | List images | `docker images` |
